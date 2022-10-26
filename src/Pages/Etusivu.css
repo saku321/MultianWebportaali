@@ -1,0 +1,206 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+#etusivuDiv {
+    margin-right: 10%;
+    margin-left: 10%;
+    overflow-x:hidden;
+}
+#etusivuImg {
+    width: 80%;
+
+}
+section{
+    width:100%;
+    min-height:120vh;
+}
+/*Tapahtumakorttien tyylimäärittelyt*/
+#tapahtumaKortit{
+    margin-top:300px;
+}
+#tapahtumaKortit ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+#tapahtumaKortit li {
+    list-style: none;
+    width: 30%;
+    border-radius: 8px;
+    margin: 30px;
+    box-shadow: 0px 0px 5px gray;
+}
+#tapahtumaKortit li h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+        word-wrap:anywhere;
+
+    margin:20px;
+    font-size: 28px;
+}
+#tapahtumaKortit li p{
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    word-wrap:anywhere;
+    margin:20px;
+}
+
+#tapahtumaKortit li img{
+    width:100%;
+    border-radius:8px;
+}
+#tapahtumaKortit li:hover{
+        cursor:pointer;
+        transform:scale(1.01);
+
+}
+#tapahtumatH1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+#bottomLine1 {
+    height: 1px;
+    background-color: #E0E0E0;
+    width:100%;
+}
+.rsis-container {
+    width:100% !important;
+}
+/*mainosShow*/
+#mainosShow {
+    height: 500px;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/*mainos divi*/
+#mainosDiv {
+    width: 100%;
+    margin-top: 200px;
+}
+#mainosDiv h1{
+      font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+#bottomLine2 {
+    height: 1px;
+    background-color: #E0E0E0;
+    width: 100%;
+}
+#mainosDiv ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+#mainosDiv li {
+    list-style: none;
+    width: 100%;
+    min-height: 350px;
+    border-radius: 8px;
+    margin: 30px;
+    border: 1px solid #d1d1d1;
+}
+
+.rightImg {
+    float: right;
+    width: 48%;
+    margin-bottom:0px;
+    height:500px;
+}
+.rightImg img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:8px;
+
+}
+.leftText {
+    float: left;
+    width: 49%;
+    word-wrap: break-word;
+    min-height: 490px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.leftText h1{
+   font-size:28px;
+   text-align:left;
+   margin-left:20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.leftText p{
+    text-align:left;
+    margin:20px;
+    max-height:300px;
+    max-height:20ch;
+    overflow: hidden;
+    font-size:20px;
+    white-space: pre-wrap;
+   line-height:30px;
+}
+.leftText a{
+    float:left;
+    margin-left:20px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    text-decoration:none;
+    color:#00A79D;
+}
+.leftText a:hover{
+    text-decoration:underline;
+}
+.yhteystiedot {
+    color: #00A79D;
+}
+#phoneImgSlider{
+    display:none;
+}
+
+/*puhelin määritykset*/
+@media only screen and (max-width: 600px) {
+   
+    #tapahtumatH1 {
+        text-align: center;
+    }
+    #mainosDiv h1 {
+        text-align: center;
+    }
+    #pcImgSlider {
+        display: none;
+    }
+    #phoneImgSlider {
+        display: block;
+    }
+
+
+    #etusivuDiv{
+        margin:0px;
+    }
+   
+    section {
+        width: 100%;
+    }
+    #tapahtumaKortit li {
+        margin-left:-10px;
+        width: 100%;
+
+
+    }
+   
+    #mainosDiv {
+        width: 100%;
+    }
+    .leftText{
+        width:100%;
+    }
+    #mainosShow {
+        margin-left:0px;
+    }
+    
+    #mainosDiv li{
+        margin-left:-15px;
+        width:90%;
+       
+    }
+}

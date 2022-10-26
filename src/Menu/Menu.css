@@ -1,0 +1,122 @@
+﻿/*fontit*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*Menu*/
+#menuDiv {
+    height: 100px;
+   
+    width:100%;
+   
+    margin-top: 10px;
+    
+}
+#menuUl{
+    margin:0px;
+    display:inline-flex;
+    flex-wrap:wrap;
+}
+
+#menuUl li{
+    list-style:none;
+    margin:40px;
+    margin-left:5px;
+
+}
+#menuUl li a{
+    text-decoration:none;
+    color:#36918E;
+    font-family: 'Roboto', sans-serif;
+    font-size:21px;
+
+}
+#menuUl li a:hover {
+    color:gray;
+    transition-duration:0.5s;
+}
+/*Header*/
+#headerDiv {
+    margin-right: 10%;
+    margin-left: 10%;
+    min-height:120px;
+    height:auto;
+    margin-top: 50px;
+    border-bottom: 1px solid #E0E0E0;
+}
+#headerDiv ul{
+    float:right;
+    display:inline-flex;
+    flex-wrap:nowrap;
+}
+#headerDiv img {
+        width: 18%;
+        float:left;
+      
+}
+#headerDiv li{
+    list-style:none;
+    margin:10px;
+    
+    
+}
+#headerDiv li p{
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#headerDiv li a {
+    text-decoration: none;
+    color: #36918E;
+}
+/*Dropdown menut*/
+.dropDown {
+    background-color: #f7f7f7;
+    z-index: 1;
+    position: absolute;
+    color: #36918E;
+    
+    border-radius:5px;
+    font-size:20px;
+    display:none;
+
+}
+
+
+#palvelut:hover #palvelutDropDown{
+    display:block;
+}
+#asuminen:hover #asuminenDropDown {
+    display: block;
+}
+#harrastukset:hover #harrastuksetDropDown {
+    display: block;
+}
+@media only screen and (max-width: 600px) {
+    #menuDiv {
+        width: 100%;
+    }
+
+    #menuUl {
+        text-align: center;
+    }
+
+    #headerDiv {
+        width: 100%;
+        margin:0px;
+        margin-top:8%;
+        margin-bottom:25px;
+    }
+    #headerDiv ul{
+        float:inherit;
+        display:block;
+    }
+    
+    #headerDiv img{
+        float:inherit;
+        width:30%;
+
+    }
+    #menuUl li {
+         margin: 20px;
+    }
+}
