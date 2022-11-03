@@ -65,7 +65,7 @@ app.post("/luoMainos", (req, res) => {
     database.query(createTable, (err, result) => {
                 console.log(err);
 
-                //lisätään tiedot tietokantaan
+                //lisÃ¤tÃ¤Ã¤n tiedot tietokantaan
 
         const insertData = "INSERT INTO Mainokset (Otsikko,Kuvaus,KuvaUrl,SivunUrl,Haltija,Yhteystiedot) VALUES (?,?,?,?,?,?)";
         database.query(insertData, [otsikko, kuvaus, kuvaUrl, sivunLinkki, haltija, yhteystiedot], (err, result) => {
@@ -201,7 +201,7 @@ app.post("/luoTapahtuma", (req, res) => {
     database.query(createTable, (err, result) => {
         console.log(err);
 
-        //lisätään tiedot tietokantaan
+        //lisÃ¤tÃ¤Ã¤n tiedot tietokantaan
 
         const insertData = "INSERT INTO Tapahtumat (Otsikko,Kuvaus,KuvaUrl,Haltija) VALUES (?,?,?,?)";
         database.query(insertData, [otsikko, kuvaus, kuvaUrl, haltija], (err, result) => {
@@ -221,7 +221,7 @@ app.post("/julkaiseTapahtuma", (req, res) => {
     const kuvaus = req.body.kuvaus;
     const kuvaUrl = req.body.kuva;
 
-    //jos taulua ei löydy luodaan se
+    //jos taulua ei lÃ¶ydy luodaan se
     const createTable = "CREATE TABLE IF NOT EXISTS EtuSivunTapahtumat ( id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, Otsikko VARCHAR(255) NOT NULL, Kuvaus VARCHAR(255) NOT NULL,  KuvaUrl VARCHAR(255), MainoksenId VARCHAR(255) NOT NULL, reg_date TIMESTAMP )";
     database.query(createTable, (err, result) => {
         console.log(err);
@@ -319,7 +319,7 @@ app.post("/muokkaaTapahtumaa", (req, res) => {
     const kuvaus = req.body.kuvaus;
     const kuvaUrl = req.body.kuva;
     
-    //Päivitä tiedot tapahtumat tableen
+    //PÃ¤ivitÃ¤ tiedot tapahtumat tableen
     const edit = "UPDATE Tapahtumat SET Otsikko='"+otsikko+"', Kuvaus='"+kuvaus+"', KuvaUrl='"+kuvaUrl+"' WHERE id="+id;
     database.query(edit, (err, result) => {
         const editEtuSivunTapahtuma = "UPDATE EtuSivunTapahtumat SET Otsikko='" + otsikko + "', Kuvaus='" + kuvaus + "', KuvaUrl='" + kuvaUrl + "' WHERE MainoksenId=" + id;
@@ -372,6 +372,6 @@ app.post("/muokkaaMainosta", (req, res) => {
 });
 
 
-app.listen(3002, () => {
+app.listen(3001, () => {
     console.log("serverrunning");
 })
