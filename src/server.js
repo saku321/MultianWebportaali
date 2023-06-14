@@ -5,7 +5,7 @@ const app = express();
 var multer = require('multer');
 const cloudinary = require("cloudinary");
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
-
+require('dotenv').config();
 app.use(express.json());
 app.use(cors());
 
@@ -44,10 +44,10 @@ app.post('/tallennaKuva', parser.single("file"), (req, res) => {
 /*Mainosten luonti databaseen ja poistamiset*/
 
 const database = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "",
-    database: "multianDatabase",
+    user: process.env.DBUSER,
+    host: process.env.DBHOST,
+    password: process.env.DBPASS,
+    database: process.env.DBNAME,
 });
 app.post("/luoMainos", (req, res) => {
 
